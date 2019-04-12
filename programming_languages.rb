@@ -4,8 +4,8 @@ def reformat_languages(languages)
   # languages.map{|language| binding.pry}
 
   new_hash = {}
-  style_hash = {}
-  new_style = {}
+  # style_hash = {}
+  # new_style = {}
   # your code here
   languages.each do |style, language|
   #  style_hash[:style] = languages.keys
