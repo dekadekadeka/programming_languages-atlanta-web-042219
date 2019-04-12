@@ -8,18 +8,18 @@ def reformat_languages(languages)
   new_style = {}
   # your code here
   languages.each do |style, language|
-#    binding.pry
-   style_hash[:style] = languages.keys
-   if style_hash[:style].length == 2
-     new_style[:style] ||= []
-      new_style[:style] << [style]
-    else
-      new_style[:style] = [style]
-   end
-
+  #  style_hash[:style] = languages.keys
+  #  if style_hash[:style].length == 2
+  #    new_style[:style] ||= []
+  #     new_style[:style] << [style]
+  #   else
+  #     new_style[:style] = [style]
+  #  end
      language.each do |lang, type|
-#       binding.pry
-      new_hash[lang] = type.merge(new_style)
+       new_hash[lang] ||= type
+       new_hash[lang][:style] ||= []
+       new_hash[lang][:style] << style
+#      new_hash[lang] = type.merge(new_style)
     end
   end
   new_hash
