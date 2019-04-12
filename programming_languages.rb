@@ -1,8 +1,6 @@
 require 'pry'
 
 def reformat_languages(languages)
-  # languages.map{|language| binding.pry}
-
   new_hash = {}
   # style_hash = {}
   # new_style = {}
